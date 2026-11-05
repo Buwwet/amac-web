@@ -19,4 +19,9 @@
 --espacio-m: 1rem;
 --espacio-l: 2rem;
 --radio: 0.75rem;
+
+}
+
+.negrita {
+    font-weight: bold;
 }
