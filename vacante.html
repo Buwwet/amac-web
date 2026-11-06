@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vacantes disponibles | AMAC</title>
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/componentes.css">
+    </head>
+    <body>
+        <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+        <header>
+            <img src="img/logo.png" alt="LOGO AMAC">
+            <!-- Componente NAV-BAR tiene funcionalidad diferente dependiendo de si es mobil o web -->
+            <nav class="movil" aria-label="Navegación principal - web">
+                <img id="menu-nav" aria-label="menu" src="icons/menu.svg">
+            </nav>
+            <nav class="web" aria-label="Navegación principal - web">
+                <a aria-label="Inicio" href="index.html">INICIO</a>
+                <a aria-label="Perfil" href="extra/mi-perfil.html">PERFIL</a>
+                <a aria-label="Mis Solicitudes" href="mis-solicitudes.html">SOLICITUDES</a>
+                <a aria-label="Vacantes" href="index.html">VACANTES</a>
+                <a aria-label="Ayuda" href="extra/ayuda.html">AYUDA</a>
+
+            </nav>
+        </header>
+
+        <main>
+            <h1>Detalle de vacante</h1>
+
+            <p><span class="negrita">Puesto de trabajo en EMPRESA DADA</span>  a ##km de su ubicación.</p>
+
+            <!-- COMPONENTE - DETALLE-VACANTE -->
+            <div class="detalle-vacante">
+                <div class="detalle-vacante-datos">
+                    <img alt="imagen-vacante" src="img/supermercado.jpg">
+                    <ul>
+                        <li>
+                            <p><span class="negrita">Ubicación: </span>Rio Mississippi 131 B, Del Valle, 66220 San Pedro Garza García, N.L.</p>
+                        </li>
+                        <li>
+                            <p><span class="negrita">Descripción: </span>Supervisar compras y cubrir ausencias de empleados.</p>
+                        </li>
+                        <li>
+                            <p><span class="negrita">Horario: </span>Lunes a Jueves de 8:00am a 3:00pm.</p>
+                        </li>
+                        <li>
+                            <p><span class="negrita">Salario: </span>8 mil pesos al mes.</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- POPUP se implementara en el entregable 3-->
+                <a aria-label="postularse" class="btn btn-primario" href="mis-solicitudes.html">
+                    POSTULARME
+                </a>
+            </div>
+        </main>
+
+        
+
+        <!-- COMPONENTE FOOTER-->
+        <footer class="site-footer">
+            <!-- COMPONENTE AYUDA-->
+            <!-- POPUP se implementara en el entregable 3-->
+            <a href="index.html" class="btn-ayuda"> 
+                <img alt="btn-ayuda" aria-label="pedir ayuda" src="img/help.png">
+            </a>
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h2>Contacto</h2>
+                    <a href="#">correo@amac.com</a>
+                    <a href="#">+52 81 0000 0000</a>
+                    <a href="#">Monterrey, N.L.</a>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; 2026 AMAC. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>

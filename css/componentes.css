@@ -70,6 +70,9 @@ nav a {
 
     border: none;
     padding: var(--espacio-s) var(--espacio-m);
+
+    text-align: center;
+
 }
 
 .btn-primario {
@@ -81,7 +84,32 @@ nav a {
     width: 100%;
 }
 
-/* Search Bar */
+/* COMPONENTE boton de ayuda */
+.btn-ayuda {
+    float: right;
+
+    top: 3rem;
+    right: 2rem;
+
+    width: 40vw;
+
+    img {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) { /* Escritorio */
+    .btn-ayuda {
+        float: none;
+        width: 15vw;
+        position: fixed;
+
+        top: 80vh;
+        right: 3rem;
+    }
+}
+
+
+/* COMPONENTE Search Bar */
 .search-bar {
     display: flex;
     background-color: var(--color-acento);
@@ -132,5 +160,38 @@ nav a {
         padding: calc(var(--radio) / 3) 0;
         flex-direction: row;
         justify-content: space-around;
+    }
+}
+
+/* COMPONENTE Detalle Vacante.*/
+.detalle-vacante {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: var(--espacio-l);
+
+}
+
+.detalle-vacante-datos {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 100%;
+    }
+
+    
+}
+
+@media (min-width: 768px) { /* Escritorio */
+    .detalle-vacante {
+        a {
+            width: 50%;
+        }
+    }
+    .detalle-vacante-datos {
+        flex-direction: row;
     }
 }
