@@ -1,3 +1,6 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
 /* Colores (copiar los hex de los estilos de Figma) */
 --color-primario: #202945;
@@ -10,8 +13,9 @@
 --color-exito: #15803d;
 --color-error: #b91c1c;
 /* Tipografía */
---fuente-base: "Atkinson Hyperlegible", system-ui, sans-serif;
---texto-base: 1.125rem; /* 18 px */
+--fuente-base: "Work Sans", system-ui, sans-serif;
+--fuente-header: "Baskervville", serif;
+--texto-base: 2.15rem; /* 18 px */
 --texto-h2: 1.5rem;
 --texto-h1: 2rem;
 /* Espaciados y bordes */
@@ -25,3 +29,4 @@
 .negrita {
     font-weight: bold;
 }
+
