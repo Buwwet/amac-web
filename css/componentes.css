@@ -61,11 +61,12 @@ nav a {
 }
 
 /* Bottones generales */
-button {
+.btn {
     border-radius: 0.75rem;
 
     font-size: 2rem;
     font-weight: bold;
+    text-decoration: none;
 
     border: none;
     padding: var(--espacio-s) var(--espacio-m);
