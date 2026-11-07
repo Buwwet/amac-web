@@ -12,6 +12,14 @@
 
 --color-exito: #15803d;
 --color-error: #b91c1c;
+
+--color-aceptado: #91d38e;
+--color-pendiente: #d4d184;
+--color-rechazado: #da7676;
+
+--color-btn-inhabilitado: #dbdbdb;
+--color-texto-inhabilitado: #818181;
+
 /* Tipografía */
 --fuente-base: "Work Sans", system-ui, sans-serif;
 --fuente-header: "Baskervville", serif;
