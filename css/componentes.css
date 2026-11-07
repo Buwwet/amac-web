@@ -97,6 +97,7 @@ nav a {
         width: 100%;
     }
 }
+
 @media (min-width: 768px) { /* Escritorio */
     .btn-ayuda {
         float: none;
@@ -194,4 +195,106 @@ nav a {
     .detalle-vacante-datos {
         flex-direction: row;
     }
+}
+
+
+/* COMPONENTES PARA PÁGINA mis_solicitudes.html*/
+
+/* Tarjetas para ver información de solicitudes realizadas*/
+.tarjetas-postulaciones{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    align-items: stretch;
+}
+
+@media (min-width: 768px) { /* Escritorio */
+    .tarjetas-postulaciones {
+        width: 100%;
+        max-width: 800px;
+        margin: 2rem auto;
+        align-items: stretch;
+    }
+}
+
+.tarjeta-postulacion{
+    display: flex;
+    flex-direction: column;
+    border: black 3px solid;
+    border-radius: var(--radio);
+    margin-top: var(--espacio-s);
+    padding: 1rem;
+
+    h2{
+        margin: 0.5rem 0;
+    }
+
+    p{
+        margin: 0.8rem 1rem;
+    }
+
+    .btn{
+        margin: 1rem;
+    }
+
+    .elemento-centrado{
+        align-self: center;
+    }
+}
+
+@media (min-width: 768px) { /* Escritorio */
+    .tarjeta-postulacion {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        padding: 2rem;
+        margin: 1rem;
+
+        p:nth-of-type(1) {
+            grid-column: 1;
+        }
+
+        p:nth-of-type(2) {
+            grid-column: 1;
+        }
+
+        p:nth-of-type(3) {
+            grid-column: 2;
+            text-align: right;
+        }
+
+        p:nth-of-type(4) {
+            grid-column: 1;
+        }
+
+        .estado-solicitud {
+            grid-column: 2;
+            justify-self: end;
+        }
+
+        .btn{
+            grid-column: 1/3;
+        }
+    }
+}
+
+/* Etiqueta de estatus de postulación */
+.estado-solicitud{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radio);
+    padding: 0.1rem;
+    width: 60%;
+    text-align: center;
+}
+
+.estado-aceptado{ background-color: var(--color-aceptado); }
+.estado-pendiente{ background-color: var(--color-pendiente); }
+.estado-rechazado{ background-color: var(--color-rechazado);}
+
+.btn-inhabilitado{
+    color: var(--color-texto-inhabilitado);
+    background-color: var(--color-btn-inhabilitado);
+    cursor: not-allowed;
 }
