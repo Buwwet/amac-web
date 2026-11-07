@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Iniciar sesión | AMAC</title>
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/componentes.css">
+    </head>
+    <body>
+        <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+        <header>
+            <img src="img/logo.png" alt="LOGO AMAC">
+            <!-- Componente NAV-BAR tiene funcionalidad diferente dependiendo de si es mobil o web -->
+            <nav class="movil" aria-label="Navegación principal - web">
+                <img id="menu-nav" aria-label="menu" src="icons/menu.svg">
+            </nav>
+            <nav class="web" aria-label="Navegación principal - web">
+                <a aria-label="Inicio" href="index.html">INICIO</a>
+                <a aria-label="Perfil" href="extra/mi-perfil.html">PERFIL</a>
+                <a aria-label="Mis Solicitudes" href="mis-solicitudes.html">SOLICITUDES</a>
+                <a aria-label="Vacantes" href="index.html">VACANTES</a>
+                <a aria-label="Ayuda" href="extra/ayuda.html">AYUDA</a>
+
+            </nav>
+        </header>
+
+        <main class="pagina-formulario" id="principal">
+        <h1>Iniciar sesión</h1>
+        <p class="intro">Entra con tu correo y contraseña.</p>
+
+        <form class="tarjeta" action="#" method="post">
+        <!-- Se muestra solo cuando falle el inicio de sesión (RF-008). No dice cuál dato falló. -->
+        <p class="mensaje-error" role="alert" hidden>Correo o contraseña incorrectos. Revisa tus datos e inténtalo de nuevo.</p>
+
+        <div class="campo-formulario">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" autocomplete="email" required>
+        </div>
+        <div class="campo-formulario">
+        <label for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena" name="contrasena" autocomplete="current-password" required>
+        </div>
+
+        <button class="btn btn-primario max-w" type="submit">INICIAR SESIÓN</button>
+        </form>
+
+        <p class="pregunta-cuenta">¿No tienes cuenta? <a class="enlace-fuerte" href="registro-candidato.html">Regístrate</a></p>
+        </main>
+
+        <!-- COMPONENTE FOOTER-->
+        <footer class="site-footer">
+            <!-- COMPONENTE AYUDA-->
+            <!-- POPUP se implementara en el entregable 3-->
+            <a href="index.html" class="btn-ayuda"> 
+                <img alt="btn-ayuda" aria-label="pedir ayuda" src="img/help.png">
+            </a>
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h2>Contacto</h2>
+                    <a href="#">correo@amac.com</a>
+                    <a href="#">+52 81 0000 0000</a>
+                    <a href="#">Monterrey, N.L.</a>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; 2026 AMAC. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>

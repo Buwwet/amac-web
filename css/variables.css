@@ -32,6 +32,12 @@
 --espacio-l: 2rem;
 --radio: 0.75rem;
 
+/*login y registro */
+--color-error-fondo: #fdecea;
+--color-azul-suave: #cae4ef; /* manual de marca */
+--color-acento-oscuro: #f2663c; /* hover de botones */
+--altura-control: 3.5rem; /* campos y botones cómodos de tocar */
+
 }
 
 .negrita {

@@ -1,0 +1,28 @@
+.pagina-formulario, .pagina-formulario *, .pagina-formulario *::before, .pagina-formulario *::after { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+/* Foco visible al navegar con Tab (accesibilidad) */
+:focus-visible {
+    outline: 3px solid var(--color-primario);
+    outline-offset: 3px;
+}
+
+header :focus-visible,
+footer :focus-visible {
+    outline-color: #ffffff;
+}
+
+/* "Saltar al contenido"*/
+.saltar-contenido {
+    position: absolute;
+    left: -9999px;
+    top: 0.5rem;
+    z-index: 100;
+    padding: 0.75rem 1rem;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    font-weight: 700;
+}
+
+.saltar-contenido:focus { left: 1rem; }
