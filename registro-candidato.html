@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro de candidato | AMAC</title>
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/componentes.css">
+    </head>
+    <body>
+        <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+        <header>
+            <img src="img/logo.png" alt="LOGO AMAC">
+            <!-- Componente NAV-BAR tiene funcionalidad diferente dependiendo de si es mobil o web -->
+            <nav class="movil" aria-label="Navegación principal - web">
+                <img id="menu-nav" aria-label="menu" src="icons/menu.svg">
+            </nav>
+            <nav class="web" aria-label="Navegación principal - web">
+                <a aria-label="Inicio" href="index.html">INICIO</a>
+                <a aria-label="Perfil" href="extra/mi-perfil.html">PERFIL</a>
+                <a aria-label="Mis Solicitudes" href="mis-solicitudes.html">SOLICITUDES</a>
+                <a aria-label="Vacantes" href="index.html">VACANTES</a>
+                <a aria-label="Ayuda" href="extra/ayuda.html">AYUDA</a>
+
+            </nav>
+        </header>
+
+        <main class="pagina-formulario" id="principal">
+        <h1>Registro de candidato</h1>
+        <p class="intro">Llena tus datos para crear tu cuenta. Con correo o celular es suficiente.</p>
+
+        <form class="tarjeta" action="#" method="post">
+        <!-- Mensajes de error: se muestran solo cuando falle el registro (RF-011, RF-013). -->
+        <p class="mensaje-error" role="alert" hidden>Ese correo o celular ya está registrado. Usa otro o inicia sesión.</p>
+        <p class="mensaje-error" role="alert" hidden>Para crear tu cuenta, acepta los términos y la política de privacidad.</p>
+
+        <fieldset class="grupo">
+        <legend class="grupo__titulo">Datos de contacto</legend>
+        <div class="rejilla-campos">
+        <div class="campo-formulario">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" autocomplete="email">
+        </div>
+        <div class="campo-formulario">
+        <label for="celular">Celular</label>
+        <input type="tel" id="celular" name="celular" autocomplete="tel">
+        </div>
+        </div>
+
+        <fieldset class="grupo grupo--interno">
+        <legend class="grupo__titulo">Medio preferido (si das ambos)</legend>
+        <div class="opcion">
+        <input type="radio" id="medio-correo" name="medio-preferido" value="correo">
+        <label for="medio-correo">Correo electrónico</label>
+        </div>
+        <div class="opcion">
+        <input type="radio" id="medio-celular" name="medio-preferido" value="celular">
+        <label for="medio-celular">Celular</label>
+        </div>
+        </fieldset>
+
+        <div class="rejilla-campos">
+        <div class="campo-formulario">
+        <label for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena" name="contrasena" autocomplete="new-password" required>
+        </div>
+        <div class="campo-formulario">
+        <label for="contrasena2">Repetir contraseña</label>
+        <input type="password" id="contrasena2" name="contrasena2" autocomplete="new-password" required>
+        </div>
+        </div>
+        </fieldset>
+
+        <fieldset class="grupo">
+        <legend class="grupo__titulo">Datos personales</legend>
+        <div class="rejilla-campos">
+        <div class="campo-formulario campo--completo">
+        <label for="nombres">Nombre(s)</label>
+        <input type="text" id="nombres" name="nombres" autocomplete="given-name" required>
+        </div>
+        <div class="campo-formulario">
+        <label for="apellido-paterno">Apellido paterno</label>
+        <input type="text" id="apellido-paterno" name="apellido-paterno" autocomplete="family-name" required>
+        </div>
+        <div class="campo-formulario">
+        <label for="apellido-materno">Apellido materno</label>
+        <input type="text" id="apellido-materno" name="apellido-materno" required>
+        </div>
+        <div class="campo-formulario">
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad" min="18" max="120" inputmode="numeric" required>
+        </div>
+        <div class="campo-formulario">
+        <label for="sexo">Sexo</label>
+        <select id="sexo" name="sexo" required>
+        <option value="" selected disabled>Seleccionar</option>
+        <option>Mujer</option>
+        <option>Hombre</option>
+        <option>Otro</option>
+        </select>
+        </div>
+        </div>
+        <div class="campo-formulario">
+        <label for="estudios">Máximo nivel de estudios</label>
+        <select id="estudios" name="estudios" required>
+        <option value="" selected disabled>Seleccionar</option>
+        <option>Sin estudios</option>
+        <option>Primaria</option>
+        <option>Secundaria</option>
+        <option>Preparatoria</option>
+        <option>Carrera técnica</option>
+        <option>Licenciatura</option>
+        <option>Posgrado</option>
+        </select>
+        </div>
+        </fieldset>
+
+        <fieldset class="grupo">
+        <legend class="grupo__titulo">Dirección</legend>
+        <div class="rejilla-campos">
+        <div class="campo-formulario">
+        <label for="calle">Calle y número</label>
+        <input type="text" id="calle" name="calle" autocomplete="street-address" required>
+        </div>
+        <div class="campo-formulario">
+        <label for="colonia">Colonia</label>
+        <input type="text" id="colonia" name="colonia" required>
+        </div>
+        </div>
+        </fieldset>
+
+        <fieldset class="grupo">
+        <legend class="grupo__titulo">Perfil profesional</legend>
+        <div class="rejilla-campos">
+        <div class="campo-formulario campo--completo">
+        <label for="experiencia">Experiencia laboral</label>
+        <textarea id="experiencia" name="experiencia" rows="4" aria-describedby="experiencia-ayuda"></textarea>
+        <p class="campo-formulario__ayuda" id="experiencia-ayuda">Cuéntanos en qué has trabajado.</p>
+        </div>
+        <div class="campo-formulario campo--completo">
+        <label for="habilidades">Habilidades</label>
+        <textarea id="habilidades" name="habilidades" rows="4" aria-describedby="habilidades-ayuda"></textarea>
+        <p class="campo-formulario__ayuda" id="habilidades-ayuda">Por ejemplo: atención a clientes, cocina, manejo de caja.</p>
+        </div>
+        </div>
+        </fieldset>
+
+        <fieldset class="grupo">
+        <legend class="grupo__titulo">Términos</legend>
+        <!-- Las páginas de términos y privacidad aún no existen: cambiar el href cuando estén -->
+        <div class="opcion">
+        <input type="checkbox" id="terminos" name="terminos" required>
+        <label for="terminos">Acepto los <a class="enlace-fuerte" href="#">Términos y condiciones</a></label>
+        </div>
+        <div class="opcion">
+        <input type="checkbox" id="privacidad" name="privacidad" required>
+        <label for="privacidad">Acepto la <a class="enlace-fuerte" href="#">Política de privacidad</a></label>
+        </div>
+        </fieldset>
+
+        <p class="nota">Al terminar, tu cuenta quedará pendiente de verificación de tu correo o celular y de aprobación por AMAC.</p>
+
+        <button class="btn btn-primario max-w" type="submit">CREAR CUENTA</button>
+        </form>
+
+        <p class="pregunta-cuenta">¿Ya tienes cuenta? <a class="enlace-fuerte" href="login.html">Inicia sesión</a></p>
+        </main>
+
+        <!-- COMPONENTE FOOTER-->
+        <footer class="site-footer">
+            <!-- COMPONENTE AYUDA-->
+            <!-- POPUP se implementara en el entregable 3-->
+            <a href="index.html" class="btn-ayuda"> 
+                <img alt="btn-ayuda" aria-label="pedir ayuda" src="img/help.png">
+            </a>
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h2>Contacto</h2>
+                    <a href="#">correo@amac.com</a>
+                    <a href="#">+52 81 0000 0000</a>
+                    <a href="#">Monterrey, N.L.</a>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; 2026 AMAC. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>

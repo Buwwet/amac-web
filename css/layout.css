@@ -78,3 +78,37 @@ footer {
     color: var(--color-fondo);;
     font-size: 0.875rem;
 }
+
+
+
+main.pagina-formulario {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: var(--espacio-l) var(--espacio-m);
+    min-height: 60vh;
+}
+
+main.pagina-formulario h1 {
+    margin: 0;
+    font-size: clamp(2rem, 7vw, 3.25rem);
+    line-height: 1.15;
+}
+
+@media (min-width: 768px) { /* Escritorio */
+    main.pagina-formulario {
+        width: min(100% - 3rem, 760px);
+        padding: 3rem 0;
+    }
+}
+
+/* rejilla de campos */
+.rejilla-campos {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: var(--espacio-m);
+}
+
+@media (min-width: 768px) { /* Escritorio */
+    .rejilla-campos { grid-template-columns: 1fr 1fr; }
+    .rejilla-campos .campo--completo { grid-column: 1 / -1; }
+}
