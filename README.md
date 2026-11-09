@@ -76,7 +76,15 @@ Para los estilos tomamos en base el kit de estilo que proporciono AMAC y los req
 ```
 # Capturas de `index.html`
 
-@ricky
+Imagen del desktop
+
+<img width="1920" height="1080" alt="index_desktop" src="https://github.com/user-attachments/assets/39a5a310-bea2-4837-bf12-d65b8c71849c" />
+
+
+Imagen del móvil
+
+<img width="380" height="1928" alt="index_movil" src="https://github.com/user-attachments/assets/210b4d2c-f36a-414c-a200-a370383bc057" />
+
 
 # Puntuación de Lighthouse
 
