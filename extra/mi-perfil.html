@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi perfil | AMAC</title>
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/layout.css">
+        <link rel="stylesheet" href="../css/componentes.css">
+    </head>
+    <body>
+        <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+        <header>
+            <img src="../img/logo.png" alt="LOGO AMAC">
+            <!-- Componente NAV-BAR tiene funcionalidad diferente dependiendo de si es mobil o web -->
+            <nav class="movil" aria-label="Navegación principal - web">
+                <img id="menu-nav" aria-label="menu" src="../icons/menu.svg">
+            </nav>
+            <nav class="web" aria-label="Navegación principal - web">
+                <a aria-label="Inicio" href="../index.html">INICIO</a>
+                <a aria-label="Perfil" href="../extra/mi-perfil.html">PERFIL</a>
+                <a aria-label="Mis Solicitudes" href="../mis-solicitudes.html">SOLICITUDES</a>
+                <a aria-label="Vacantes" href="../index.html">VACANTES</a>
+                <a aria-label="Ayuda" href="../extra/ayuda.html">AYUDA</a>
+
+            </nav>
+        </header>
+
+        <main>
+            <h1>Mi Perfil</h1>
+
+            <p><span class="negrita">NOMBRE DE LA PERSONA</span></p>
+
+            <!-- COMPONENTE - EDITAR PERFIL --> 
+            <a aria-label="editar perfil" class="btn btn-primario btn-editar" href="../index.html">
+                + EDITAR
+            </a>
+            <br>
+            <br>
+            <br>
+
+            <!-- COMPONENTE - DETALLE-VACANTE -->
+            <div class="detalle-vacante">
+                <div class="detalle-vacante-datos">
+                    <img alt="imagen-vacante" src="../img/persona.jpg">
+                    <ul>
+                        <li>
+                            <p><span class="negrita">Descripción: </span>Hola yo soy XXX y soy una persona TAL. Busco ser empleado en XXXX</p>
+                        </li>
+                        <li>
+                            <p><span class="negrita">Gustos: </span>Amo hacer manualidades. </p>
+                        </li>
+                        <li>
+                            <p><span class="negrita">Preferencias: </span>Mi horario preferido es de Lunes a Jueves de 8:00am a 5:00pm.</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- POPUP se implementara en el entregable 3-->
+                <a aria-label="postularse" class="btn btn-primario" href="../mis-solicitudes.html">
+                    Mis solicitudes
+                </a>
+            </div>
+        </main>
+
+        
+
+        <!-- COMPONENTE FOOTER-->
+        <footer class="site-footer">
+            <!-- COMPONENTE AYUDA-->
+            <!-- POPUP se implementara en el entregable 3-->
+            <a href="../index.html" class="btn-ayuda"> 
+                <img alt="btn-ayuda" aria-label="pedir ayuda" src="../img/help.png">
+            </a>
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h2>Contacto</h2>
+                    <a href="#">correo@amac.com</a>
+                    <a href="#">+52 81 0000 0000</a>
+                    <a href="#">Monterrey, N.L.</a>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; 2026 AMAC. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>
