@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMAC - Solicitudes Recibidas</title>
+  <link rel="stylesheet" href="../css/furber/solicitudes-recibidas-empresa.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo-symbol">AMAC</div>
+    <nav class="nav-links">
+      <a href="#" class="nav-link">MIS VACANTES</a>
+      <a href="#" class="nav-link active">SOLICITUDES RECIBIDAS</a>
+      <a href="#" class="nav-link">MI PERFIL</a>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <h1>Solicitudes recibidas</h1>
+
+    <!-- Selector de Vacante -->
+    <div class="dropdown-selector">
+      <span>💼 Vacante: </span>
+      <select>
+        <option>Gerente de Caja</option>
+        <option>Auxiliar Administrativo</option>
+      </select>
+    </div>
+
+    <!-- Pestañas de estado -->
+    <div class="tabs-container">
+      <button class="tab-btn active">Todas (12)</button>
+      <button class="tab-btn">En revisión (5)</button>
+      <button class="tab-btn">Aceptadas (3)</button>
+      <button class="tab-btn">Rechazadas (4)</button>
+    </div>
+
+    <!-- Lista de Candidatos -->
+    <div class="candidates-list">
+      <!-- Candidato 1 -->
+      <div class="candidate-card">
+        <img src="https://via.placeholder.com/60" alt="Juan Pérez" class="avatar">
+        <div class="candidate-info">
+          <h3>Juan Pérez</h3>
+          <p class="meta-info">🎂 62 años &nbsp;|&nbsp; 💼 15+ años experiencia Ventas &nbsp;|&nbsp; 📍 CDMX &nbsp;|&nbsp; 📅 Posted: 24 OCT 2026</p>
+          <div class="candidate-actions">
+            <button class="btn-primary-sm">Ver perfil completo</button>
+            <button class="btn-select">Cambiar estatus ▼</button>
+          </div>
+        </div>
+        <span class="badge badge-yellow">● En revisión - Amarillo</span>
+      </div>
+
+      <!-- Candidato 2 -->
+      <div class="candidate-card">
+        <img src="https://via.placeholder.com/60" alt="Juanita Gonzalez" class="avatar">
+        <div class="candidate-info">
+          <h3>Juanita Gonzalez</h3>
+          <p class="meta-info">🎂 68 años &nbsp;|&nbsp; 💼 20+ años administración &nbsp;|&nbsp; 📍 Residencia: Sin dato</p>
+          <div class="candidate-actions">
+            <button class="btn-primary-sm">Ver perfil completo</button>
+            <button class="btn-select">Cambiar estatus ▼</button>
+          </div>
+        </div>
+        <span class="badge badge-green">● Aceptada / Entrevista - Verde</span>
+      </div>
+
+      <!-- Candidato 3 -->
+      <div class="candidate-card">
+        <img src="https://via.placeholder.com/60" alt="Pepito Clavo" class="avatar">
+        <div class="candidate-info">
+          <h3>Pepito Clavo un Clavito</h3>
+          <p class="meta-info">🎂 65 años &nbsp;|&nbsp; 💼 5+ años logística &nbsp;|&nbsp; 📍 Residencia: Sin dato</p>
+          <div class="candidate-actions">
+            <button class="btn-primary-sm">Ver perfil completo</button>
+            <button class="btn-select">Cambiar estatus ▼</button>
+          </div>
+        </div>
+        <span class="badge badge-yellow">● En revisión - Amarillo</span>
+      </div>
+    </div>
+
+    <!-- Paginador -->
+    <div class="pagination">
+      <button class="page-btn">&lt;</button>
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">&gt;</button>
+    </div>
+
+    <!-- Sección Inferior Split: Detalle + Cambiar Estatus -->
+    <div class="split-detail-grid">
+      <!-- Izquierda: Detalle -->
+      <div class="detail-card">
+        <div class="detail-header">
+          <div>
+            <h2>Detalle del candidato</h2>
+            <p class="subtitle">Información completa disponible para revisión y seguimiento.</p>
+          </div>
+          <span class="badge badge-yellow">● En revisión</span>
+        </div>
+
+        <div class="profile-summary">
+          <img src="https://via.placeholder.com/70" alt="Juan Pérez" class="avatar-large">
+          <div>
+            <h3>Juan Pérez</h3>
+            <p class="subtitle">Vacante: Gerente de Caja</p>
+            <div class="profile-details-grid">
+              <span>🎂 62 años</span>
+              <span>💼 15+ años experiencia Ventas</span>
+              <span>📍 CDMX</span>
+              <span>📅 Publicada: 24 OCT 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="data-table">
+          <h4>Datos completos</h4>
+          <div class="data-row"><span>Nombre completo</span><strong>Juan Pérez</strong></div>
+          <div class="data-row"><span>Edad</span><strong>62 años</strong></div>
+          <div class="data-row"><span>Residencia</span><strong>CDMX</strong></div>
+          <div class="data-row"><span>Experiencia</span><strong>15+ años experiencia Ventas</strong></div>
+          <div class="data-row"><span>Correo electrónico</span><strong>No proporcionado</strong></div>
+          <div class="data-row"><span>Teléfono</span><strong>No proporcionado</strong></div>
+          <div class="data-row"><span>LinkedIn</span><strong>No proporcionado</strong></div>
+          <div class="data-row"><span>CV adjunto</span><strong>No proporcionado</strong></div>
+        </div>
+      </div>
+
+      <!-- Derecha: Cambiar Estatus -->
+      <div class="status-card">
+        <h2>Cambiar estatus</h2>
+        <p class="subtitle">Selecciona el nuevo estado de la solicitud y guarda los cambios.</p>
+
+        <div class="current-status-banner">
+          ● Actual: En revisión
+        </div>
+
+        <div class="status-options">
+          <label class="status-option selected">
+            <input type="radio" name="status" checked> ● En revisión
+          </label>
+          <label class="status-option">
+            <input type="radio" name="status"> ● Aceptada
+          </label>
+          <label class="status-option">
+            <input type="radio" name="status"> ● Rechazada
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label>Motivo (opcional)</label>
+          <textarea rows="4" placeholder="Agrega una nota breve para el equipo o el candidato (opcional)."></textarea>
+        </div>
+
+        <div class="status-actions">
+          <button class="btn-secondary">Cancelar</button>
+          <button class="btn-primary">Guardar cambios</button>
+        </div>
+        <p class="note-footer">Los cambios se aplicarán a la solicitud seleccionada y se reflejarán en el listado.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="pantalla2-script.js"></script>
+</body>
+</html>
