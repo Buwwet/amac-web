@@ -92,6 +92,11 @@ nav a {
     }
 }
 
+/* COMPONENTE boton editar */
+.btn-editar {
+    float: right;
+}
+
 @media (min-width: 768px) { /* Escritorio */
     .btn-ayuda {
         float: none;
