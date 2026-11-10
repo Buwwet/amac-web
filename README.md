@@ -5,7 +5,7 @@ Link a Vercel: https://amac-web-six.vercel.app/
 # Integrantes y aportaciones
 **Valeria Edith Rodarte Martínez**
 
-@val
+Yo fui responsable de las páginas de `mis-solicitudes.html`, en la que los usuarios (adultos mayores) tienen acceso a la información sobre sus postulaciones y pueden cancelar aquellas que no han sido respondidas, y `registro.empresa.html`, en la que las empresas pueden registrarse para poder publicar sus vacantes. Asimismo, modifiqué los archivos .css (variables y componentes) para poder crear dichas páginas.
 
 **Ricardo Miguel Villarreal De Ochoa**
 
@@ -86,6 +86,11 @@ Para los estilos tomamos en base el kit de estilo que proporciono AMAC y los req
 * `BottonAyuda`
 * `Footer`
 * `DetalleVacante`
+* `TarjetaPostulacion`
+* `EstadoSolicitud`
+* `CampoFormulario`
+* `BotonCancelar`
+* `BotonEnviar`
 
 
 # Capturas de `index.html`
