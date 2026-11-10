@@ -516,3 +516,56 @@ button.btn {
     font-weight: 700;
     text-decoration: underline;
 }
+
+/* PÁGINA registro-empresa*/
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin-bottom: 2.5rem;
+}
+
+fieldset legend {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+.columna-seccion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0.5rem;
+}
+
+.columna-seccion label{
+    font-weight: bold;
+    margin: 0.2rem;
+}
+
+.columna-seccion input{
+    border: black 1px solid;
+    border-radius: var(--radio);
+}
+
+.fila-seccion{
+    display:flex;
+    flex-direction: column;
+}
+
+#btn-enviar {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) { /* Escritorio */
+    .fila-seccion{
+        flex-direction: row;
+    }
+}

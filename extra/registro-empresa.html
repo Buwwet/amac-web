@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vacantes disponibles | AMAC</title>
+        <title>Registro de empresa | AMAC</title>
         
         <link rel="stylesheet" href="../css/variables.css">
         <link rel="stylesheet" href="../css/base.css">
@@ -16,6 +16,7 @@
         <header>
             <img src="../img/logo.png" alt="LOGO AMAC">
             <!-- Componente NAV-BAR tiene funcionalidad diferente dependiendo de si es mobil o web -->
+            <!-- Componente NAV-BAR va a cambiar a una barra de navegación específico para empresas al agregar react -->
             <nav class="movil" aria-label="Navegación principal - web">
                 <img id="menu-nav" aria-label="menu" src="icons/menu.svg">
             </nav>
@@ -23,14 +24,169 @@
                 <a aria-label="Inicio" href="../index.html">INICIO</a>
                 <a aria-label="Perfil" href="mi-perfil.html">PERFIL</a>
                 <a aria-label="Mis Solicitudes" href="../mis-solicitudes.html">SOLICITUDES</a>
-                <a aria-label="Vacantes" href="i../ndex.html">VACANTES</a>
+                <a aria-label="Vacantes" href="../index.html">VACANTES</a>
                 <a aria-label="Ayuda" href="../extra/ayuda.html">AYUDA</a>
 
             </nav>
         </header>
 
         <main>
+            <h1>Registro de empresa</h1>
             
+            <form>
+                <fieldset>
+                    <legend>Datos de empresa</legend>
+
+                    <div class="columna-seccion">
+                        <label for="nombre-empresa">Nombre</label>
+                        <input type="text" id="nombre-empresa" name="nombre-empresa" minlength="2" maxlength="100" required>
+                    </div>
+
+                    <div class="fila-seccion">
+                        <div class="columna-seccion">
+                            <label for="giro-empresa">Giro</label>
+                            <select id="giro-empresa" name="giro-empresa" required>
+                                <option value="" disabled selected>Selecciona un giro</option>
+                                <option value="tecnologia">Tecnología y Software</option>
+                                <option value="comercio">Comercio / Retail</option>
+                                <option value="servicios">Servicios Profesionales</option>
+                                <option value="manufactura">Manufactura / Industria</option>
+                                <option value="salud">Salud y Bienestar</option>
+                                <option value="educacion">Educación</option>
+                                <option value="alimentos">Alimentos</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="columna-seccion">
+                            <label for="rfc">RFC</label>
+                            <input type="text" id="rfc" name="rfc" pattern="^[A-Za-zñÑ&]{3,4}\d{6}[A-Za-z\d]{3}$" maxlength="13" required>
+                        </div>
+
+                    </div>
+
+                    <div class="fila-seccion">
+
+                        <div class="columna-seccion">
+                            <label for="telefono-empresa">Teléfono</label>
+                            <input type="tel" id="telefono-empresa" name="telefono-empresa" pattern="[0-9]{10}" maxlength="10" required>
+                        </div>
+
+                        <div class="columna-seccion">
+                            <label for="correo-empresa">Correo electrónico</label>
+                            <input type="email" id="correo-empresa" name="correo-empresa" required>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dirección</legend>
+
+                    <div class="fila-seccion">
+                        <div class="columna-seccion">
+                            <label for="calle">Calle</label>
+                            <input type="text" id="calle" name="calle" minlength="2" required>
+                        </div>
+
+                        <div class="columna-seccion">
+                            <label for="numero">Número</label>
+                            <input type="text" id="numero" name="numero" maxlength="10" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-seccion">
+                        <div class="columna-seccion">
+                            <label for="colonia">Colonia</label>
+                            <input type="text" id="colonia" name="colonia" minlength="2" required>
+                        </div>
+
+                        <div class="columna-seccion">
+                            <label for="cp">Código postal</label>
+                            <input type="text" id="cp" name="cp" maxlength="5" pattern="[0-9]{5}" required>
+                        </div>
+                    </div>
+
+                    <div class="columna-seccion">
+                        <label for="municipio">Municipio o ciudad</label>
+                        <input type="text" id="municipio" name="municipio" minlength="2">
+                    </div>
+
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+
+                    <div class="columna-seccion">
+                        <label for="nombre-contacto">Nombre(s)</label>
+                        <input type="text" id="nombre-contacto" name="nombre-contacto" minlength="2" required>
+                    </div>
+
+                    <div class="fila-seccion">
+                        <div class="columna-seccion">
+                            <label for="apellidop-contacto">Apellido paterno</label>
+                            <input type="text" id="apellidop-contacto" name="apellidop-contacto" minlength="2" required>
+                        </div>
+
+                        <div class="columna-seccion">
+                            <label for="apellidom-contacto">Apellido materno</label>
+                            <input type="text" id="apellidom-contacto" name="apellidom-contacto" minlength="2" >
+                        </div>
+                    </div>
+
+                    <div class="fila-seccion">
+                        <div class="columna-seccion">
+                            <label for="telefono-contacto">Teléfono</label>
+                            <input type="tel" id="telefono-contacto" name="telefono-contacto" pattern="[0-9]{10}" maxlength="10" required>
+                        </div>
+
+                        <div class="columna-seccion">
+                            <label for="correo-contacto">Correo electrónico</label>
+                            <input type="email" id="correo-contacto" name="correo-contacto" required>
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contraseña</legend>
+
+                    <div class="fila-seccion">
+                        <div class="columna-seccion">
+                            <label for="contraseña">Contraseña</label>
+                            <input type="password" id="contraseña" name="contraseña" minlength="8" required>
+                        </div>
+
+                        <div class="columna-seccion">
+                            <label for="confirmar-contraseña">Confirmar contraseña</label>
+                            <input type="password" id="confirmar-contraseña" name="confirmar-contraseña" minlength="8" required>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Imagen de empresa</legend>
+
+                    <div class="fila-seccion">
+                        <div class="columna-seccion">
+                            <label for="logo-empresa">Logo de empresa</label>
+                            <input type="file" id="logo-empresa" name="logo-empresa" accept=".jpg, .jpeg, .png, .pdf, image/jpeg, image/png, application/pdf" required>
+                        </div>
+
+                        <div class="columna-seccion">
+                            <label for="banner-empresa">Banner de empresa</label>
+                            <input type="file" id="banner-empresa" name="banner-empresa" accept=".jpg, .jpeg, .png, .pdf, image/jpeg, image/png, application/pdf" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div id="btn-enviar">
+                    <input type="submit" value="Enviar" class="btn btn-primario">
+                </div>
+
+            </form>
         </main>
 
         
