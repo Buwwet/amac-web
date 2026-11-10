@@ -80,10 +80,10 @@ nav a {
 
 /* COMPONENTE boton de ayuda */
 .btn-ayuda {
-    float: right;
+    position: absolute;
 
     top: 3rem;
-    right: 2rem;
+    right: 0rem;
 
     width: 40vw;
 

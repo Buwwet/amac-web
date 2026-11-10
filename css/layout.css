@@ -46,6 +46,7 @@ main {
 
 /* Footer */
 footer {
+    position: relative;
     margin-top: calc(var(--espacio-l) * 2);
     background: var(--color-texto);
     color: var(--color-fondo);
