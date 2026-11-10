@@ -1,0 +1,83 @@
+:root {
+  --primary-orange: #FF5733;
+  --bg-dark: #1E293B;
+  --bg-light: #F4F6F9;
+  --card-bg: #FFFFFF;
+  --text-main: #1F2937;
+  --text-muted: #6B7280;
+  --border-color: #E5E7EB;
+  --green-bg: #E6F4EA; --green-text: #137333;
+  --yellow-bg: #FEF7E0; --yellow-text: #B06000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+body { background-color: var(--bg-light); color: var(--text-main); }
+
+.navbar { background-color: var(--bg-dark); display: flex; justify-content: space-between; padding: 1rem 3rem; color: #FFF; }
+.logo-symbol { font-weight: 700; color: #FF6B4A; }
+.nav-links { display: flex; gap: 2rem; }
+.nav-link { color: #9CA3AF; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+.nav-link.active { color: #FFF; border-bottom: 2px solid #FFF; }
+
+.main-container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+h1 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+
+.dropdown-selector { background: white; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 1.5rem; }
+.dropdown-selector select { border: none; background: transparent; font-weight: 600; cursor: pointer; }
+
+.tabs-container { display: flex; gap: 1.5rem; border-bottom: 1px solid var(--border-color); margin-bottom: 1.5rem; }
+.tab-btn { background: none; border: none; padding-bottom: 0.5rem; color: var(--text-muted); font-weight: 600; cursor: pointer; }
+.tab-btn.active { color: var(--primary-orange); border-bottom: 2px solid var(--primary-orange); }
+
+.candidates-list { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; }
+.candidate-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+.candidate-info { flex: 1; }
+.candidate-info h3 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+.meta-info { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+
+.candidate-actions { display: flex; gap: 0.75rem; }
+.btn-primary-sm { background: var(--primary-orange); color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.8rem; cursor: pointer; }
+.btn-select { background: white; border: 1px solid var(--border-color); padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.8rem; cursor: pointer; }
+
+.badge { font-size: 0.75rem; padding: 0.3rem 0.75rem; border-radius: 12px; font-weight: 600; align-self: flex-start; }
+.badge-yellow { background: var(--yellow-bg); color: var(--yellow-text); }
+.badge-green { background: var(--green-bg); color: var(--green-text); }
+
+.pagination { display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; }
+.page-btn { background: white; border: 1px solid var(--border-color); width: 32px; height: 32px; border-radius: 4px; cursor: pointer; }
+.page-btn.active { background: var(--bg-dark); color: white; border-color: var(--bg-dark); }
+
+/* Split Detail Section */
+.split-detail-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 1.5rem; }
+.detail-card, .status-card { background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+
+.detail-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; }
+.profile-summary { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem; }
+.avatar-large { width: 70px; height: 70px; border-radius: 50%; }
+.profile-details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; }
+
+.data-table { display: flex; flex-direction: column; gap: 0.5rem; }
+.data-table h4 { margin-bottom: 0.5rem; }
+.data-row { display: flex; justify-content: space-between; background: #F9FAFB; padding: 0.6rem 0.8rem; border-radius: 6px; font-size: 0.8rem; }
+.data-row span { color: var(--text-muted); }
+
+/* Status Card */
+.current-status-banner { background: #FEF3C7; color: #92400E; padding: 0.6rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; margin: 1rem 0; }
+.status-options { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+.status-option { padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; font-size: 0.85rem; cursor: pointer; }
+.status-option.selected { background: #FFF5F2; border-color: var(--primary-orange); }
+
+.status-actions { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1rem; }
+.btn-secondary { background: white; border: 1px solid var(--border-color); padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+.btn-primary { background: var(--primary-orange); color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+.note-footer { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.75rem; }
