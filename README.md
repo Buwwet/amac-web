@@ -74,6 +74,18 @@ Para los estilos tomamos en base el kit de estilo que proporciono AMAC y los req
 
 }
 ```
+# Componentes identificados
+
+* `Header`
+* `NavBar`
+* `Searchbar`
+* `Popup`
+* `ListadoVacanteItem`
+* `BottonAyuda`
+* `Footer`
+* `DetalleVacante`
+
+
 # Capturas de `index.html`
 
 Imagen del desktop
