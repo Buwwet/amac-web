@@ -10,7 +10,7 @@ Link a Vercel: https://amac-web-six.vercel.app/
 **Ricardo Miguel Villarreal De Ochoa**
 
 Yo aporte los componentes globales del `Header`, `Navbar`, `Footer` y `HelpButton` que se usan en la mayoría de páginas,
-Además de ser responsable de las páginas `index.html`, `vacante.html`, `extra/mi-perfil.html`, `404.html` y los componentes que requirieron.
+Además de ser responsable de las páginas `index.html`, `vacante.html`, `empresa-vacantes-html`, `extra/mi-perfil.html`, `404.html` y los componentes que requirieron.
 
 También dí de alta el Vercel (https://amac-web-six.vercel.app/).
 
