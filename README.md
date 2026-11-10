@@ -17,7 +17,7 @@ También dí de alta el Vercel (https://amac-web-six.vercel.app/).
 
 **Jorge Eduardo Furber Rodríguez** 
 
-@furber
+Yo hice todo lo relacionado a las interfaces que ven las empresas, siendo `Mi-perfil-empresa`, `panel-vacante-empresa` y `solicitudes-recibidas-empresa`. Por esto mismo, los diseños son un poco distintos (aunque se mantiene la paleta de colores y la base de la página como tal), ya que el usuario-empresa no necesita las mismas configuraciones que el usuario-empleado. Estas páginas permiten a los reclutadores de empresas gestionar sus vacantes, revisar las métricas y dar seguimiento a las solicitudes de candidatos.
 
 **Manuel Pineda Arroyo**
 
