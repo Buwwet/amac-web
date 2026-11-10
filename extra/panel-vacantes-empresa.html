@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMAC - Panel de Vacantes</title>
+  <link rel="stylesheet" href="../css/furber/panel-vacante-empresa.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="logo-container">
+      <div class="logo-symbol">AMAC</div>
+    </div>
+    <nav class="nav-links">
+      <a href="#" class="nav-link active">MIS VACANTES</a>
+      <a href="#" class="nav-link">SOLICITUDES RECIBIDAS</a>
+      <a href="#" class="nav-link">MI PERFIL</a>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <!-- Header de la sección -->
+    <div class="page-header">
+      <div>
+        <h1>Panel de vacantes</h1>
+        <p class="subtitle">Gestiona tus vacantes publicadas y revisa postulantes.</p>
+      </div>
+      <button class="btn-primary" id="btn-toggle-form">+ Publicar nueva vacante</button>
+    </div>
+
+    <!-- Tarjetas de métricas -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-info">
+          <span class="stat-number">12</span>
+          <span class="stat-label">Vacantes activas</span>
+        </div>
+        <div class="stat-icon">💼</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-info">
+          <span class="stat-number">45</span>
+          <span class="stat-label">Solicitudes totales</span>
+        </div>
+        <div class="stat-icon">👥</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-info">
+          <span class="stat-number">3</span>
+          <span class="stat-label">En proceso</span>
+        </div>
+        <div class="stat-icon">⏱️</div>
+      </div>
+    </section>
+
+    <!-- Formulario de nueva vacante -->
+    <section class="form-card" id="form-vacante">
+      <div class="form-header">
+        <h2>Publicar nueva vacante</h2>
+        <span class="badge badge-draft">Borrador</span>
+      </div>
+      <p class="form-description">Completa los datos obligatorios para publicar una nueva oportunidad laboral.</p>
+
+      <form id="job-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nombre del empleo *</label>
+            <input type="text" placeholder="Ej: Gerente de caja" required>
+          </div>
+          <div class="form-group">
+            <label>Sueldo *</label>
+            <input type="text" placeholder="Ej: $25,000 – $32,000 MXN" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ubicación *</label>
+            <input type="text" placeholder="Ej: Coyoacán, CDMX" required>
+          </div>
+          <div class="form-group">
+            <label>Horario *</label>
+            <input type="text" placeholder="Ej: Lunes a viernes, 09:00 – 18:00" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Categoría *</label>
+            <input type="text" placeholder="Ej: Ventas / Retail" required>
+          </div>
+          <div class="form-group">
+            <label>Recepción de postulaciones *</label>
+            <div class="radio-options">
+              <label class="radio-card">
+                <input type="radio" name="recepcion" value="plataforma">
+                <div>
+                  <strong>Solo por plataforma</strong>
+                  <p>Los candidatos me postularán directamente desde la vacante publicada.</p>
+                </div>
+              </label>
+              <label class="radio-card selected">
+                <input type="radio" name="recepcion" value="plataforma_telefono" checked>
+                <div>
+                  <strong>Plataforma + teléfono</strong>
+                  <p>Los candidatos podrán postular por plataforma y también llamar al número indicado.</p>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label>Número de contacto (obligatorio si se habilita teléfono)</label>
+          <input type="text" class="input-highlight" placeholder="Ej: +52 1234 5678">
+          <span class="input-note">Se mostrará junto a la vacante si se permite recepción por teléfono.</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Descripción del empleo *</label>
+            <textarea rows="4" placeholder="Describa las responsabilidades, objetivos y contexto del puesto. Incluya información relevante para que los candidatos puedan entender el rol y su impacto en la empresa."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Requisitos *</label>
+            <textarea rows="4" placeholder="Enumere los requisitos mínimos, experiencia, habilidades y certificaciones necesarias para el puesto."></textarea>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label>Prestaciones *</label>
+          <textarea rows="3" placeholder="Incluya beneficios, bonos, horarios flexibles, capacitación u otros beneficios que la empresa ofrezca."></textarea>
+        </div>
+
+        <div class="form-footer">
+          <span class="mandatory-note">Todos los campos marcados con * son obligatorios.</span>
+          <div class="form-buttons">
+            <button type="button" class="btn-secondary">Guardar borrador</button>
+            <button type="submit" class="btn-primary">Publicar vacante</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Filtros de búsqueda -->
+    <div class="filters-bar">
+      <div class="search-box">
+        🔍 <input type="text" id="search-input" placeholder="Buscar vacante por título...">
+      </div>
+      <div class="select-box">
+        <select id="status-filter">
+          <option value="todas">Estado: Todas ▼</option>
+          <option value="activa">Activa</option>
+          <option value="pausada">Pausada</option>
+          <option value="cerrada">Cerrada</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Lista de Vacantes -->
+    <section class="vacantes-list">
+      <!-- Card 1 -->
+      <div class="vacante-card" data-status="activa">
+        <div class="vacante-header">
+          <span class="badge badge-active">● Activa - Verde</span>
+        </div>
+        <h3>Gerente de caja</h3>
+        <p class="vacante-location">Coyoacán, CDMX / Medio tiempo</p>
+        <p class="vacante-applicants">👥 8 Solicitudes recibidas</p>
+        <div class="vacante-actions">
+          <button class="btn-outline">Pausar</button>
+          <button class="btn-outline btn-danger">Cerrar</button>
+          <a href="#" class="btn-link">Ver solicitudes</a>
+          <a href="#" class="btn-link">Modificar</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="vacante-card" data-status="pausada">
+        <div class="vacante-header">
+          <span class="badge badge-paused">● Pausada - Amarillo</span>
+        </div>
+        <h3>Auxiliar Administrativo</h3>
+        <p class="vacante-location">Remoto / Flexible</p>
+        <p class="vacante-applicants">👥 12 Solicitudes recibidas</p>
+        <div class="vacante-actions">
+          <button class="btn-outline btn-success">Reactivar</button>
+          <button class="btn-outline btn-danger">Cerrar</button>
+          <a href="#" class="btn-link">Ver solicitudes</a>
+          <a href="#" class="btn-link">Modificar</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="vacante-card" data-status="cerrada">
+        <div class="vacante-header">
+          <span class="badge badge-closed">● Cerrada</span>
+        </div>
+        <h3>Vendedor</h3>
+        <p class="vacante-location">Cerrada el 12 Ene 2026</p>
+        <p class="vacante-applicants">👥 24 Solicitudes recibidas</p>
+        <div class="vacante-actions">
+          <button class="btn-outline btn-success">Reabrir</button>
+          <a href="#" class="btn-link">Ver solicitudes</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="load-more-container">
+      <button class="btn-load-more">Ver más ▼</button>
+    </div>
+  </main>
+
+  <script src="pantalla1-script.js"></script>
+</body>
+</html>
