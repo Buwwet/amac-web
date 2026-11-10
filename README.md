@@ -21,7 +21,9 @@ También dí de alta el Vercel (https://amac-web-six.vercel.app/).
 
 **Manuel Pineda Arroyo**
 
-@manu
+Yo aporté los componentes de formularios `Tarjeta`, `GrupoCampos`, `CampoFormulario`, `Opcion`, `MensajeError` y `Nota`, que se usan en las páginas de acceso y registro,
+además de las reglas de accesibilidad globales de `base.css` (foco visible y enlace "Saltar al contenido").
+También soy responsable de las páginas `login.html` y `registro-candidato.html` y de los componentes que requirieron.
 
 
 # Estilos
@@ -100,7 +102,8 @@ Imagen del móvil
 
 # Puntuación de Lighthouse
 
-@manu
+<img width="403" height="498" alt="Screenshot 2026-11-09 213847" src="https://github.com/user-attachments/assets/d0536784-a917-4635-837a-62e3973a0796" />
+
 
 # Recursos usados
 ## Atribuciones de fotografías
