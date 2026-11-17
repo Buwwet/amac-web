@@ -30,6 +30,8 @@ header {
 main {
     margin: 0.25rem;
     padding: 0.25rem;
+
+    min-height: 30rem;
 }
 
 @media (min-width: 768px) { /* Escritorio */
