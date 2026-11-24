@@ -7,12 +7,23 @@ export default function Login() {
 
     return <>
         <button onClick={
-            () => crear_perfil("ricardo.villarreald@udem.edu", "676767", {rol: "candidato", nombre: "ricardo", edad: 67, colonia: "67 land", experiencia: "2000xp"})
+            () => crear_perfil("barack@obama.edu", "676767", {rol: "empresa", nombre: "obama", edad: 67, colonia: "67 land", experiencia: "2000xp"})
+        }>
+            SIGN UP -obama
+        </button>
+        <button onClick={
+            () => iniciar_session("barack@obama.edu", "676767")
+        }>
+            LOGIN -obama
+        </button>
+
+        <button onClick={
+            () => crear_perfil("ricky@com.edu", "676767", {rol: "candidato", nombre: "ricky", edad: 67, colonia: "67 land", experiencia: "2000xp"})
         }>
             SIGN UP -ricky
         </button>
         <button onClick={
-            () => iniciar_session("ricardo.villarreald@udem.edu", "676767")
+            () => iniciar_session("ricky@com.edu", "676767")
         }>
             LOGIN -ricky
         </button>

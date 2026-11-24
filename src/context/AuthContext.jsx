@@ -8,10 +8,8 @@ export function AuthProvider({ children }) {
     // 1) Escuchar la sesión: al abrir la página, al iniciar y al cerrar sesión
     useEffect(() => {
         supabase.auth.getSession().then(({ data }) => setSesion(data.session))
-        const { data: { subscription } } = supabase.auth.onAuthStateChange((_evento, nuevaSesion)
-        => {
-        setSesion(nuevaSesion)
-    })
+        const { data: { subscription } } = supabase.auth.onAuthStateChange((_evento, nuevaSesion) => {
+            setSesion(nuevaSesion) })
         return () => subscription.unsubscribe()
     }, [])
     // 2) Cada vez que cambia la sesión, cargar el perfil (rol, nombre, aprobado...)
@@ -22,13 +20,17 @@ export function AuthProvider({ children }) {
         if (!usuarioId) { setPerfil(null); setCargando(false); return }
 
         setCargando(true)
-        supabase.from('perfiles').select('*').eq('id', usuarioId).single()
-        .then(({ data }) => { setPerfil(data); setCargando(false) })
-    }, [sesionLista, usuarioId])
+        supabase.from('perfiles').select('*').eq('id', usuarioId).maybeSingle()
+        .then(({ data }) => { 
+            setPerfil(data); setCargando(false) }
+        )
+    }, [sesionLista, usuarioId]);
+
+
     return (
-        <AuthContext.Provider value={{ sesion, perfil, cargando }}>
-            {children}
-        </AuthContext.Provider>
+    <AuthContext.Provider value={{ sesion, perfil, cargando }}>
+    {children}
+    </AuthContext.Provider>
     )
 }
 export const useAuth = () => useContext(AuthContext)
