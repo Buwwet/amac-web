@@ -44,3 +44,7 @@
     font-weight: bold;
 }
 
+.title {
+    font-weight: bold;
+    font-size: calc(var(--texto-base) * 1.2);
+}

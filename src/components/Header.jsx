@@ -14,13 +14,16 @@ export default function Header() {
 
         <div className="popup-movil">
             <Popup isOpen={isOpen} closePopup={closePopup}>
-                <nav className="movil-vert">
-                    <a aria-label="Inicio" href="/user/">INICIO</a>
-                    <a aria-label="Perfil" href="/user/perfil">PERFIL</a>
-                    <a aria-label="Mis Solicitudes" href="/user/mis-solicitudes">SOLICITUDES</a>
-                    <a aria-label="Vacantes" href="/user/">VACANTES</a>
-                    <a aria-label="Ayuda" href="/user/ayuda">AYUDA</a>
-                </nav>
+                <div>
+                    <nav className="movil-vert">
+                        <a aria-label="Inicio" href="/user/">INICIO</a>
+                        <a aria-label="Perfil" href="/user/perfil">PERFIL</a>
+                        <a aria-label="Mis Solicitudes" href="/user/mis-solicitudes">SOLICITUDES</a>
+                        <a aria-label="Vacantes" href="/user/">VACANTES</a>
+                        <a aria-label="Ayuda" href="/user/ayuda">AYUDA</a>
+                    </nav>
+                </div>
+                
             </Popup>
         </div>
         

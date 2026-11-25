@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { useAMACContext } from "../context/AMACContext";
+import PopupGenerico from "../components/PopupGenerico";
+
+
 
 export default function DetalleVacante() {
     const {getSpecificVacante} = useAMACContext();
@@ -8,6 +11,8 @@ export default function DetalleVacante() {
     // TODO: tomar el vacante_id de la url y usarlo para obtener los datos de la vacante.
     const [vacante, setVacante] = useState();
     const [cargando, setCargando] = useState(true);
+
+    const [popup, setPopup] = useState();
 
     // Conseguir el ID
     const path = window.location.pathname;
@@ -26,8 +31,51 @@ export default function DetalleVacante() {
         a();
     }, []);
 
+
+    const closePopup = () => {
+        setPopup(null);
+    }
+
+    const openSecondPopup = () => {
+        console.log("TODO -> postular via supabase!!")
+        setPopup(
+            <PopupGenerico 
+                title={"Postulación exitosa"}
+                body={"Se ha enviado su solicitud a la empresa. Este pendiente a su respuesta. ¿Desea ir a ver el estatus de sus solicitudes?"}
+                primaryContent={"Sí, ver estatus"}
+                secondaryContent={"No, quedarme aqui"}
+                closePopup={closePopup}
+                onPrimaryClick={() => {
+                    console.log("TODO -> mandar a postulados ")
+                }}
+                onSecondaryClick={closePopup}
+                >
+
+            </PopupGenerico>
+        );
+    }
+
+
+    const openFirstPopup = () => {
+        setPopup(
+            <PopupGenerico 
+                title={"Confirmación"}
+                body={"Vas a mandar una solicitud para postularte al puesto PUESTO de la empresa EMPRESA ubicada en LUGAR. ¿Esta seguro?"}
+                primaryContent={"Sí, postulame"}
+                secondaryContent={"No, regresar"}
+                closePopup={closePopup}
+                onPrimaryClick={openSecondPopup}
+                onSecondaryClick={closePopup}
+                >
+
+            </PopupGenerico>
+        );
+    }
+
     
     return <>
+
+    {popup}
     {(cargando && vacante == null) ? <div> Cargando ... </div> :
     <>
     <h1>Detalle de vacante</h1>
@@ -60,8 +108,7 @@ export default function DetalleVacante() {
                 </li> : <></>}
             </ul>
         </div>
-        {/* TODO POPOUP cmp */}
-        <a aria-label="postularse" className="btn btn-primario" href="mis-solicitudes.html">
+        <a aria-label="postularse" className="btn btn-primario" onClick={openFirstPopup}>
             POSTULARME
         </a>
     </div>
