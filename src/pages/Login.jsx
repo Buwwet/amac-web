@@ -27,5 +27,12 @@ export default function Login() {
         }>
             LOGIN -ricky
         </button>
+
+
+        <button onClick={
+            () => crear_perfil("admin@soriana.mx", "676767", {rol: "empresa", nombre: "Soriana", edad: 67, colonia: "adwad", experiencia: "2000xp", img_url: "https://upload.wikimedia.org/wikipedia/commons/6/61/LogoSorianaSVG.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"})
+        }>
+            SIGN UP - otro
+        </button>
     </>
 }
