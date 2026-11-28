@@ -706,3 +706,161 @@ fieldset legend {
 
     top: 10vh;
 }
+/* =========================================================
+   NAVBAR CON SESIÓN (login / registro)
+   ========================================================= */
+
+/* El logo ahora es un enlace al inicio */
+.logo-inicio {
+    float: left;
+    display: block;
+    height: 100%;
+}
+
+/* Botón de menú en celular (antes era solo una imagen) */
+.btn-menu {
+    display: grid;
+    place-content: center;
+    min-width: 3rem;
+    min-height: 3rem;
+    margin-right: var(--espacio-m);
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header .btn-menu img {
+    float: none;
+    height: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav.movil { gap: var(--espacio-s); }
+
+/* Enlaces y zona de sesión en escritorio */
+nav.web .nav-enlaces,
+nav.web .nav-sesion {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav a,
+.nav-salir {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem; /* 44 px para tocar fácil */
+    white-space: nowrap;
+}
+
+/* Perfil: avatar + nombre */
+.nav-perfil {
+    gap: 0.625rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-perfil__nombre {
+    max-width: 12ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.avatar,
+header img.avatar,
+nav.movil img.avatar,
+nav.movil-vert img.avatar {
+    float: none;
+    filter: none; /* el menú invierte los íconos; el logo de la empresa no */
+    display: grid;
+    place-content: center;
+    flex: none;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    font-family: var(--fuente-base);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-primario);
+    background: var(--color-fondo);
+    border: 2px solid var(--color-acento);
+}
+
+/* Botón "SALIR": se ve como enlace pero es un botón (no navega, hace una acción) */
+.nav-salir {
+    padding: 0;
+    font: inherit;
+    color: var(--color-fondo);
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-salir--movil { font-size: inherit; }
+
+/* "REGISTRARSE" resalta como botón */
+.nav-registrarse {
+    padding: 0 1rem;
+    color: var(--color-texto);
+    font-weight: 700;
+    text-decoration: none;
+    background: var(--color-acento);
+    border-radius: var(--radio);
+}
+
+.nav-registrarse:hover { background: var(--color-acento-oscuro); }
+
+@media (min-width: 768px) { /* Escritorio */
+    nav.web {
+        width: auto;
+        margin-left: 0;
+        padding: 0 2rem 0 1rem;
+        justify-content: space-between;
+        gap: 2rem;
+        font-size: 1.125rem; /* 18 px: cabe en tablet sin cortar */
+    }
+}
+
+/* Tablet: solo el avatar (sin el nombre) para que quepa todo el menú */
+@media (min-width: 768px) and (max-width: 1099px) {
+    nav.web { gap: 1rem; padding-right: 1rem; }
+    nav.web .nav-enlaces,
+    nav.web .nav-sesion { gap: 1rem; }
+    nav.web .nav-perfil__nombre {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+    }
+}
+
+@media (min-width: 1200px) {
+    nav.web { font-size: 1.5rem; }
+}
+
+/* Botón deshabilitado mientras se envía el formulario */
+button.btn:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+/* Segunda pregunta debajo del formulario ("¿Eres una empresa?") */
+.pregunta-cuenta--secundaria { margin-top: var(--espacio-s); }
+
+/* Tarjeta de "¡Tu cuenta fue creada!" */
+.registro-listo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-m);
+    font-size: 1.25rem;
+}
+
+.registro-listo .nota { margin: 0; }
